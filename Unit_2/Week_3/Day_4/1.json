@@ -1,11 +1,6 @@
 {
   "student": [
     {
-      "id": 1,
-      "name": "Bhanu ",
-      "age": 19
-    },
-    {
       "id": 2,
       "name": "Rahul",
       "age": 19

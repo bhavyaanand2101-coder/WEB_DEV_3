@@ -70,7 +70,6 @@ app.get("/read", (req, res) => {
 app.get("/stread", (req, res) => {
   const data = fs.readFileSync("./1.json", "utf-8");
 
-  // JSON -> JavaScript object
   const jsData = JSON.parse(data);
 
   console.log(jsData, typeof jsData);
@@ -89,7 +88,6 @@ app.get("/stread", (req, res) => {
 app.get("/trread", (req, res) => {
   const data = fs.readFileSync("./1.json", "utf-8");
 
-  // JSON -> JavaScript object
   const jsData = JSON.parse(data);
 
   console.log(jsData, typeof jsData);
@@ -219,6 +217,41 @@ app.patch("/patch/:id", (req, res) => {
 
   res.send({
     msg: "Student Partially Updated Successfully",
+  });
+});
+
+// =====================================================
+// DELETE API / Delete Student
+// =====================================================
+
+app.delete("/delete/:id", (req, res) => {
+  // Get ID from URL
+  const id = req.params.id;
+
+  console.log("ID:", id);
+
+  // Read JSON file
+  const data = JSON.parse(fs.readFileSync("./1.json", "utf-8"));
+
+  const stdata = data.student;
+
+  console.log("Old Student Data:", stdata);
+
+  // Delete student
+  const updatedData = stdata.filter((el) => {
+    return el.id != id;
+  });
+
+  console.log("Updated Student Data:", updatedData);
+
+  // Update student array
+  data.student = updatedData;
+
+  // Save updated data
+  fs.writeFileSync("./1.json", JSON.stringify(data, null, 2));
+
+  res.send({
+    msg: "Student Deleted Successfully",
   });
 });
 
