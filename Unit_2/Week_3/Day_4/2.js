@@ -158,3 +158,19 @@ app.delete("/delete/:id", (req, res) => {
 app.listen(8080, () => {
   console.log("Server started");
 });
+
+//
+// =====================================================
+// There are 3 methods for talking from Client to Server
+// =====================================================
+//
+// 1. Query Parameter
+//    --> req.query
+//
+// 2. Body Parameter
+//    --> req.body
+//
+// 3. Route Parameter
+//    --> req.params
+//
+// =====================================================
