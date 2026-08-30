@@ -13,14 +13,16 @@ if (!operation || isNaN(num1) || isNaN(num2)) {
   process.exit(1);
 }
 
-// Step 3: Perform operation using switch case
+// Step 3: Perform operation using switch-case
+// 'switch' checks the 'operation' variable against different 'case' conditions
 let result;
 
 switch (operation) {
+  // Stacking 'case' labels allows aliases (e.g. 'add' or '+') to run the same code block
   case "add":
   case "+":
     result = num1 + num2;
-    break;
+    break; // 'break' exits the switch block once a matching case completes
 
   case "sub":
   case "subtract":
@@ -44,6 +46,7 @@ switch (operation) {
     result = num1 / num2;
     break;
 
+  // 'default' acts like an 'else' block if none of the cases match
   default:
     console.log("Invalid operation! Use add, sub, multiply, or divide.");
     process.exit(1);

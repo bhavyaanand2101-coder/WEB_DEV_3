@@ -24,3 +24,12 @@ Roll 3: 5
 Roll 1: 5
 Roll 2: 6
 Roll 3: 5
+Roll 1: 4
+Roll 2: 5
+Roll 3: 5
+Roll 1: 3
+Roll 2: 6
+Roll 3: 2
+Roll 1: 3
+Roll 2: 1
+Roll 3: 4

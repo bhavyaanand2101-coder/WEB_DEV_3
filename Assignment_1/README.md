@@ -7,7 +7,6 @@
 
 ## ⚡ One Command to Run All Utilities
 
-Copy and paste this single command into your terminal to run all programs:
 
 ```bash
 cd "/Users/bhavya/Desktop/ /Sem_3/Web_Dev_3/WEB_DEV_3/Assignment_1" && echo "\n--- 1. CALCULATOR ---" && node calculator.js add 10 5 && echo "\n--- 2. APP (CUSTOM MODULES) ---" && node app.js && echo "\n--- 3. FILE MANAGER ---" && node fileManager.js && echo "\n--- 4. DICE GENERATOR ---" && node dice.js 3
@@ -42,3 +41,11 @@ cd "/Users/bhavya/Desktop/ /Sem_3/Web_Dev_3/WEB_DEV_3/Assignment_1" && echo "\n-
 
 ### 6. `dice.js` (Random Dice Roller using `crypto`)
 - Uses `crypto.randomInt(1, 7)` to roll dice 1–6 and logs history to `dice_history.txt`.
+
+
+
+## Script-  
+
+```bash
+cd "/Users/bhavya/Desktop/ /Sem_3/Web_Dev_3/WEB_DEV_3/Assignment_1" && echo "\n--- 1. CALCULATOR ---" && node calculator.js add 10 5 && echo "\n--- 2. APP (CUSTOM MODULES) ---" && node app.js && echo "\n--- 3. FILE MANAGER ---" && node fileManager.js && echo "\n--- 4. DICE GENERATOR ---" && node dice.js 3
+```
