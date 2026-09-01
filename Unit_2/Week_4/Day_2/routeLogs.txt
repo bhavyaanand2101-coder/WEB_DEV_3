@@ -1,0 +1,4 @@
+Request received for route: /about/ and method: GET
+Request received for route: /about and method: GET
+Request received for route: /read and method: GET
+Request received for route: /admin and method: GET
