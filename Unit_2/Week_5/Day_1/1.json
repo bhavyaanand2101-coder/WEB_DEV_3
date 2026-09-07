@@ -1,0 +1,15 @@
+{
+  "student": [
+    {
+      "id": 2,
+      "name": "Rahul",
+      "age": 19
+    }
+  ],
+  "trainer": [
+    {
+      "id": 1,
+      "name": "Amit"
+    }
+  ]
+}
