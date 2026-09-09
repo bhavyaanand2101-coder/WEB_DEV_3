@@ -39,3 +39,6 @@ Roll 3: 5
 Roll 1: 6
 Roll 2: 2
 Roll 3: 5
+Roll 1: 2
+Roll 2: 6
+Roll 3: 1
