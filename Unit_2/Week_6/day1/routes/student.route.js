@@ -118,3 +118,4 @@ studentRouter.delete("/delete/:id", (req, res) => {
 });
 
 module.exports = { studentRouter };
+// cors- cross origin resource sharing
