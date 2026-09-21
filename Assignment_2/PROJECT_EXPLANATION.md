@@ -440,3 +440,6 @@ curl -X GET http://localhost:3000/random
 
 ### Q10. What HTTP status code is returned on successful creation, and why not 200?
 > **Answer:** `201 Created` is returned. While `200 OK` signifies a generic success, `201 Created` specifically indicates that a new resource has been created on the server as a direct result of the request, conforming to RFC 7231 HTTP specifications.
+
+
+<!-- Important Questions  -->
