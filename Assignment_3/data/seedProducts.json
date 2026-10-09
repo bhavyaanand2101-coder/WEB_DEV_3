@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Study Table",
+    "sku": "FURN-TB-012",
+    "category": "Furniture",
+    "price": 3999,
+    "quantity": 2,
+    "reorderLevel": 4,
+    "supplier": "IKEA India"
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "sku": "FURN-CH-044",
+    "category": "Furniture",
+    "price": 6499,
+    "quantity": 3,
+    "reorderLevel": 6,
+    "supplier": "Godrej Interio"
+  },
+  {
+    "name": "Wireless Gaming Mouse",
+    "sku": "ELEC-MS-101",
+    "category": "Electronics",
+    "price": 1299,
+    "quantity": 30,
+    "reorderLevel": 10,
+    "supplier": "Logitech India"
+  },
+  {
+    "name": "Mechanical RGB Keyboard",
+    "sku": "ELEC-KB-205",
+    "category": "Electronics",
+    "price": 2999,
+    "quantity": 29,
+    "reorderLevel": 12,
+    "supplier": "Keychron India"
+  },
+  {
+    "name": "Noise Cancelling Headphones",
+    "sku": "ELEC-HP-309",
+    "category": "Electronics",
+    "price": 5499,
+    "quantity": 35,
+    "reorderLevel": 15,
+    "supplier": "Sony India"
+  },
+  {
+    "name": "27-inch 4K Monitor",
+    "sku": "ELEC-MN-411",
+    "category": "Electronics",
+    "price": 12749,
+    "quantity": 2,
+    "reorderLevel": 5,
+    "supplier": "Dell Technologies"
+  },
+  {
+    "name": "Cotton Crewneck T-Shirt",
+    "sku": "APPL-TS-008",
+    "category": "Apparel",
+    "price": 599,
+    "quantity": 60,
+    "reorderLevel": 20,
+    "supplier": "Zara Retail"
+  },
+  {
+    "name": "Slim Fit Denim Jacket",
+    "sku": "APPL-JK-021",
+    "category": "Apparel",
+    "price": 2199,
+    "quantity": 18,
+    "reorderLevel": 10,
+    "supplier": "Levi Strauss India"
+  },
+  {
+    "name": "Gel Pen Pack of 15",
+    "sku": "STNY-PN-713",
+    "category": "Stationery",
+    "price": 120,
+    "quantity": 40,
+    "reorderLevel": 20,
+    "supplier": "Cello Pens"
+  },
+  {
+    "name": "Hardbound Notebook A5",
+    "sku": "STNY-NB-102",
+    "category": "Stationery",
+    "price": 180,
+    "quantity": 50,
+    "reorderLevel": 15,
+    "supplier": "Classmate ITC"
+  },
+  {
+    "name": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "sku": "BOOK-DP-001",
+    "category": "Books",
+    "price": 850,
+    "quantity": 4,
+    "reorderLevel": 8,
+    "supplier": "Pearson Education"
+  },
+  {
+    "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "sku": "BOOK-CC-002",
+    "category": "Books",
+    "price": 750,
+    "quantity": 25,
+    "reorderLevel": 10,
+    "supplier": "Prentice Hall"
+  }
+]

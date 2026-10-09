@@ -68,3 +68,244 @@
 // };
 // module.exports = { welcome };
 // PPT-3 Finished
+
+// ============================================================
+// LECTURE 14 - CRUD OPERATIONS USING MVC
+// Express.js
+// Temporary Database: Array
+// ============================================================
+
+const express = require("express");
+
+const app = express();
+
+// ============================================================
+// MIDDLEWARE
+// ============================================================
+
+app.use(express.json());
+
+// ============================================================
+// TEMPORARY DATABASE
+// ============================================================
+
+let students = [
+  {
+    id: 1,
+    name: "Rahul",
+    age: 22,
+    course: "B.Tech",
+  },
+  {
+    id: 2,
+    name: "Aman",
+    age: 20,
+    course: "BCA",
+  },
+  {
+    id: 3,
+    name: "Priya",
+    age: 23,
+    course: "B.Tech",
+  },
+];
+
+// ============================================================
+// CREATE OPERATION
+// POST /students
+// ============================================================
+
+const createStudent = (req, res) => {
+  const { name, age, course } = req.body;
+
+  const newStudent = {
+    id: students.length + 1,
+    name: name,
+    age: age,
+    course: course,
+  };
+
+  students.push(newStudent);
+
+  res.status(201).json({
+    message: "Student created successfully",
+    student: newStudent,
+  });
+};
+
+// ============================================================
+// READ ALL STUDENTS
+// GET /students
+// ============================================================
+
+const getStudents = (req, res) => {
+  res.status(200).json({
+    message: "All students",
+    students: students,
+  });
+};
+
+// ============================================================
+// READ SINGLE STUDENT
+// GET /students/:id
+// ============================================================
+
+const getStudentById = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const student = students.find((student) => student.id === id);
+
+  if (!student) {
+    return res.status(404).json({
+      message: "Student Not Found",
+    });
+  }
+
+  res.status(200).json({
+    message: "Student found",
+    student: student,
+  });
+};
+
+// ============================================================
+// UPDATE OPERATION
+// PUT /students/:id
+// ============================================================
+
+const updateStudent = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const student = students.find((student) => student.id === id);
+
+  if (!student) {
+    return res.status(404).json({
+      message: "Student Not Found",
+    });
+  }
+
+  const { name, age, course } = req.body;
+
+  if (name !== undefined) {
+    student.name = name;
+  }
+
+  if (age !== undefined) {
+    student.age = age;
+  }
+
+  if (course !== undefined) {
+    student.course = course;
+  }
+
+  res.status(200).json({
+    message: "Student updated successfully",
+    student: student,
+  });
+};
+
+// ============================================================
+// DELETE OPERATION
+// DELETE /students/:id
+// ============================================================
+
+const deleteStudent = (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const index = students.findIndex((student) => student.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({
+      message: "Student Not Found",
+    });
+  }
+
+  const deletedStudent = students.splice(index, 1);
+
+  res.status(200).json({
+    message: "Student deleted successfully",
+    student: deletedStudent[0],
+  });
+};
+
+// ============================================================
+// SEARCH OPERATION
+// GET /search?name=rahul
+// ============================================================
+
+const searchStudent = (req, res) => {
+  const name = req.query.name;
+
+  const student = students.find(
+    (student) => student.name.toLowerCase() === name.toLowerCase(),
+  );
+
+  if (!student) {
+    return res.status(404).json({
+      message: "Student Not Found",
+    });
+  }
+
+  res.status(200).json({
+    message: "Student found",
+    student: student,
+  });
+};
+
+// ============================================================
+// FILTER OPERATION
+// GET /filter?age=21
+// ============================================================
+
+const filterStudents = (req, res) => {
+  const age = parseInt(req.query.age);
+
+  const filteredStudents = students.filter((student) => student.age > age);
+
+  res.status(200).json({
+    message: "Filtered students",
+    students: filteredStudents,
+  });
+};
+
+// ============================================================
+// ROUTES
+// ============================================================
+
+// CREATE
+app.post("/students", createStudent);
+
+// READ ALL
+app.get("/students", getStudents);
+
+// READ SINGLE
+app.get("/students/:id", getStudentById);
+
+// UPDATE
+app.put("/students/:id", updateStudent);
+
+// DELETE
+app.delete("/students/:id", deleteStudent);
+
+// SEARCH
+app.get("/search", searchStudent);
+
+// FILTER
+app.get("/filter", filterStudents);
+
+// ============================================================
+// HOME ROUTE
+// ============================================================
+
+app.get("/", (req, res) => {
+  res.send("Student CRUD API is running");
+});
+
+// ============================================================
+// START SERVER
+// ============================================================
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
